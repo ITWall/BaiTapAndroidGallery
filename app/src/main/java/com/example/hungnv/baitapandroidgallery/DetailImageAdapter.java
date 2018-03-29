@@ -38,17 +38,21 @@ public class DetailImageAdapter extends RecyclerView.Adapter<DetailImageAdapter.
         return new ViewHolder(v);
     }
 
+    @SuppressLint("ResourceType")
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.ivItem.setImageResource(listImages.get(position));
         if(position == imagePosition){
             holder.ivItem.clearColorFilter();
+        }else{
+            holder.ivItem.setColorFilter(Color.parseColor(context.getResources().getString(R.color.colorFilter)));
         }
         holder.ivItem.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceType")
             @Override
             public void onClick(View v) {
                 iChangeImage.onChangeImage(listImages.get(position));
+                imagePosition = position;
                 notifyDataSetChanged();
             }
         });
@@ -65,7 +69,6 @@ public class DetailImageAdapter extends RecyclerView.Adapter<DetailImageAdapter.
         public ViewHolder(View itemView) {
             super(itemView);
             ivItem = itemView.findViewById(R.id.ivItem);
-            ivItem.setColorFilter(Color.parseColor(context.getResources().getString(R.color.colorFilter)));
         }
     }
 }

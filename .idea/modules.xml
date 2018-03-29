@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BaiTapAndroidGallery.iml" filepath="$PROJECT_DIR$/BaiTapAndroidGallery.iml" />
+      <module fileurl="file://E:\Android\BaiTapAndroidGallery\BaiTapAndroidGallery.iml" filepath="E:\Android\BaiTapAndroidGallery\BaiTapAndroidGallery.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\Android\BaiTapAndroidGallery\app\app.iml" filepath="E:\Android\BaiTapAndroidGallery\app\app.iml" />
     </modules>
   </component>
 </project>
